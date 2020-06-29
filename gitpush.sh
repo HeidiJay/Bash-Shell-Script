@@ -14,4 +14,4 @@ git push origin master
 
 read
 
-exit || clear
+exit
