@@ -1,4 +1,5 @@
 #! /bin/bash
-echo "Enter name : "
-read name1 name2 name3
-echo "Enter name : $name1 , $name2, $name3"
+read -p 'username : ' user_var
+read -sp 'username : ' pass_var
+echo "username : $user_var"
+echo "password : $pass_var" 
