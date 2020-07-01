@@ -4,7 +4,7 @@
 
 echo "Comparing both RPM-Painting files"
 
-if cmp -s Heidi-Projects/RPM-Painting wget git@github.com:HeidiJay/RPM-Painting.git
+if cmp -l Heidi-Projects/RPM-Painting wget git@github.com:HeidiJay/RPM-Painting.git
 then
 echo "This File Is Safe."
 else
