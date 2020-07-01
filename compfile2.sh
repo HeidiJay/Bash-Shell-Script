@@ -8,7 +8,7 @@ echo "Comparing both RPM-Painting files"
 
 wget git@github.com:HeidiJay/RPM-Painting.git
 
-if diff RPM-Painting cleanfile >/dev/null ; #Experiment 
+if diff RPM-Painting
 then
 echo "This File Is Safe."
 else

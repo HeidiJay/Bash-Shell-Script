@@ -6,7 +6,7 @@ cd public_html/ # Need to create new WordPress with public_html. Old Hosting exp
 echo "Comparing both htaccess files."
 
 wget http:// # Add the new location here when finished making it.
-# Find out if I need to download software for wget
+
 if diff .htaccess cleanwphtaccess >/dev/null ; # dev/null is the trash file
 then
 echo "This File Is Safe."
