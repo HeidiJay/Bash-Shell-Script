@@ -6,6 +6,7 @@ echo "CHECKING HOSTS FILE" # message
 if [ -n "$(grep "wordpress.local" /etc/hosts)" ]; # "$grep" means reach inside and search for patterns in files
     # "-n" means show matching line number.
     # reach inside wordpress.local and /ect/hosts and search for patterens and show matching number lines
+    # Comparing files to see if wordpress exists on localhost.
     then
 		echo "wordpress.local ALREADY EXISTS" # message
 	else
@@ -15,10 +16,12 @@ if [ -n "$(grep "wordpress.local" /etc/hosts)" ]; # "$grep" means reach inside a
 		# "--" marks the end of options and thus the beginning of arguments.
         # "-c" means read commands from the following string and assign any arguments to the positional parameters
         # "-e" means execute command
-        # "sudo -- sh -c -e" means As root user, read commands in string and assign any arguments to the parameters and excute those commands 
+        # "sudo -- sh -c -e" means As root user, read commands in string and assign any arguments to the parameters and excute those commands
+        # I believe this will this will install the files from wordpress.local into /ect/hosts to add wordpress localhost. 
         if [ -n "$(grep "wordpress.local" /etc/hosts)" ]; #  # "$grep" means reach inside and search for patterns in files
          # "-n" means show matching line number.
          # reach inside wordpress.local and /ect/hosts and search for patterens and show matching number lines
+         # Comparing files again to see if now wordpress exists on localhost.
         then
 			echo "wordpress.local SUCCESSFULLY ADDED TO HOSTS FILE"; # message
 		else
