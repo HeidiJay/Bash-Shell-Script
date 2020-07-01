@@ -11,7 +11,9 @@ if [ -n "$(grep "wordpress.local" /etc/hosts)" ]; #
 
 		sudo -- sh -c -e "echo '127.0.0.1	wordpress.local' >> /etc/hosts"; # "sudo sh" means all commands in that shell are executed as root
 		# "--" marks the end of options and thus the beginning of arguments.
-        # "-c -e" means execute command
+        # "-c" means read commands from the following string and assign any arguments to the positional parameters
+        # "-e" means execute command
+        # 
         if [ -n "$(grep "wordpress.local" /etc/hosts)" ]; #  
         then
 			echo "wordpress.local SUCCESSFULLY ADDED TO HOSTS FILE"; # message
