@@ -6,7 +6,7 @@ echo "CHECKING FILES"
 file1="Heidi-Projects/Testing1/file1test"
 file2="Heidi-Projects/Testing2/file2test"
 
-if diff $file1=$file2 > /dev/null 2>&1 ;
+if diff -n $file1=$file2 > /dev/null 2>&1 ;
 then
 echo "GOOD, file2test IS THERE."
 else
